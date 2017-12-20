@@ -72,6 +72,8 @@
       <HintPath>..\packages\Newtonsoft.Json.10.0.3\lib\net45\Newtonsoft.Json.dll</HintPath>
       <Private>True</Private>
     </Reference>
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Security" />
     <Reference Include="System.Web.DynamicData" />
     <Reference Include="System.Web.Entity" />
     <Reference Include="System.Web.ApplicationServices" />
@@ -127,6 +129,16 @@
     <Content Include="Content\bootstrap.css" />
     <Content Include="Content\bootstrap.min.css" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
+    <Content Include="Models\ListsModel.Context.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>ListsModel.edmx</DependentUpon>
+      <LastGenOutput>ListsModel.Context.cs</LastGenOutput>
+    </Content>
+    <Content Include="Models\ListsModel.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>ListsModel.edmx</DependentUpon>
+      <LastGenOutput>ListsModel.cs</LastGenOutput>
+    </Content>
     <Content Include="packages.config" />
     <Content Include="Scripts\angular-mocks.js" />
     <Content Include="Scripts\angular-route.js" />
@@ -141,6 +153,13 @@
     <Content Include="Content\bootstrap.css.map" />
     <Content Include="Content\bootstrap-theme.min.css.map" />
     <Content Include="Content\bootstrap-theme.css.map" />
+    <EntityDeploy Include="Models\ListsModel.edmx">
+      <Generator>EntityModelCodeGenerator</Generator>
+      <LastGenOutput>ListsModel.Designer.cs</LastGenOutput>
+    </EntityDeploy>
+    <Content Include="Models\ListsModel.edmx.diagram">
+      <DependentUpon>ListsModel.edmx</DependentUpon>
+    </Content>
     <None Include="Scripts\jquery-3.2.1.intellisense.js" />
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
@@ -177,11 +196,52 @@
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
     <Compile Include="Infrastructure\HandleErrorAttribute.cs" />
+    <Compile Include="Models\Animated_Movies.cs">
+      <DependentUpon>ListsModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Anime____Cartoons.cs">
+      <DependentUpon>ListsModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Completed_Manga___Manwah.cs">
+      <DependentUpon>ListsModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Current_Anime___Cartoons.cs">
+      <DependentUpon>ListsModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\ListsModel.Context.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ListsModel.Context.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\ListsModel.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ListsModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\ListsModel.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ListsModel.edmx</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Live_Action_Movies.cs">
+      <DependentUpon>ListsModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Live_Action_TV_Shows.cs">
+      <DependentUpon>ListsModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Manga___Manwah.cs">
+      <DependentUpon>ListsModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Video_Game.cs">
+      <DependentUpon>ListsModel.tt</DependentUpon>
+    </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App\" />
-    <Folder Include="Models\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

@@ -1,0 +1,97 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+      <Schema Namespace="Model.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <!--Errors Found During Generation:
+warning 6013: The table/view 'List Of Lists.dbo.Animated_Movies' does not have a primary key defined and no valid primary key could be inferred. This table/view has been excluded. To use the entity, you will need to review your schema, add the correct keys, and uncomment it.
+        <EntityType Name="Animated_Movies">
+          <Property Name="Name" Type="nvarchar" MaxLength="255" />
+          <Property Name="Genre" Type="nvarchar" MaxLength="255" />
+          <Property Name="Recommend" Type="nvarchar" MaxLength="255" />
+          <Property Name="Year" Type="float" />
+          <Property Name="Download" Type="nvarchar" MaxLength="255" />
+          <Property Name="Need to watch" Type="nvarchar" MaxLength="255" />
+          <Property Name="Total" Type="float" />
+        </EntityType>-->
+        <!--Errors Found During Generation:
+warning 6013: The table/view 'List Of Lists.dbo.Anime_&_Cartoons' does not have a primary key defined and no valid primary key could be inferred. This table/view has been excluded. To use the entity, you will need to review your schema, add the correct keys, and uncomment it.
+        <EntityType Name="Anime_&amp;_Cartoons">
+          <Property Name="Current Anime/Cartoons" Type="nvarchar" MaxLength="255" />
+          <Property Name="Completed Anime/Cartoons" Type="nvarchar" MaxLength="255" />
+          <Property Name="Recommended" Type="nvarchar" MaxLength="255" />
+          <Property Name="F4" Type="nvarchar" MaxLength="255" />
+          <Property Name="F5" Type="nvarchar" MaxLength="255" />
+        </EntityType>-->
+        <!--Errors Found During Generation:
+warning 6013: The table/view 'List Of Lists.dbo.Live_Action_Movies' does not have a primary key defined and no valid primary key could be inferred. This table/view has been excluded. To use the entity, you will need to review your schema, add the correct keys, and uncomment it.
+        <EntityType Name="Live_Action_Movies">
+          <Property Name="Name" Type="nvarchar" MaxLength="255" />
+          <Property Name="Genre" Type="nvarchar" MaxLength="255" />
+          <Property Name="Download" Type="nvarchar" MaxLength="255" />
+          <Property Name="Recommend" Type="nvarchar" MaxLength="255" />
+          <Property Name="Year" Type="nvarchar" MaxLength="255" />
+          <Property Name="Need to watch" Type="nvarchar" MaxLength="255" />
+          <Property Name="Total" Type="float" />
+        </EntityType>-->
+        <!--Errors Found During Generation:
+warning 6013: The table/view 'List Of Lists.dbo.Manga_&_Manwah' does not have a primary key defined and no valid primary key could be inferred. This table/view has been excluded. To use the entity, you will need to review your schema, add the correct keys, and uncomment it.
+        <EntityType Name="Manga_&amp;_Manwah">
+          <Property Name="Current Manga followed by the current chapter " Type="nvarchar" MaxLength="255" />
+          <Property Name="Last Chapter Read" Type="float" />
+          <Property Name="F3" Type="nvarchar" MaxLength="255" />
+          <Property Name="Completed Manga" Type="nvarchar" MaxLength="255" />
+          <Property Name="Recommend" Type="nvarchar" MaxLength="255" />
+          <Property Name="New Manga or Anime to try" Type="nvarchar" MaxLength="255" />
+          <Property Name="F7" Type="nvarchar" MaxLength="255" />
+        </EntityType>-->
+        <!--Errors Found During Generation:
+warning 6013: The table/view 'List Of Lists.dbo.TV_Shows' does not have a primary key defined and no valid primary key could be inferred. This table/view has been excluded. To use the entity, you will need to review your schema, add the correct keys, and uncomment it.
+        <EntityType Name="TV_Shows">
+          <Property Name="F1" Type="nvarchar" MaxLength="255" />
+        </EntityType>-->
+        <!--Errors Found During Generation:
+warning 6013: The table/view 'List Of Lists.dbo.Video_Games' does not have a primary key defined and no valid primary key could be inferred. This table/view has been excluded. To use the entity, you will need to review your schema, add the correct keys, and uncomment it.
+        <EntityType Name="Video_Games">
+          <Property Name="Name" Type="nvarchar" MaxLength="255" />
+          <Property Name="Console" Type="nvarchar" MaxLength="255" />
+          <Property Name="Recommendation" Type="nvarchar" MaxLength="255" />
+        </EntityType>-->
+        <EntityContainer Name="ModelStoreContainer" />
+      </Schema>
+    </edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="Model" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <EntityContainer Name="List_Of_ListsEntities" annotation:LazyLoadingEnabled="true" />
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="ModelStoreContainer" CdmEntityContainer="List_Of_ListsEntities" />
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="true" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="true" />
+        <DesignerProperty Name="UseLegacyProvider" Value="false" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="None" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams></Diagrams>
+  </Designer>
+</edmx:Edmx>
